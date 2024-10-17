@@ -1,0 +1,20 @@
+# Generate ed25519 SSH key
+ssh-keygen -t ed25519 -C "nabeelaofficial04@gmail.com"
+
+# Start the SSH agent
+eval $(ssh-agent -s)
+
+# Add the SSH key to the agent
+ssh-add ~/.ssh/id_ed25519
+
+# Copy the public key to the clipboard
+cat ~/.ssh/id_ed25519.pub | clip
+
+# Change to your repository directory
+cd /path/to/your/repo
+
+# Set the remote URL
+git remote set-url origin git@github.com:nabeela04/repository.git
+
+# Test the SSH connection
+ssh -T git@github.com
