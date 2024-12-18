@@ -1,3 +1,11 @@
+1. Packages to Install Beforehand
+
+sudo apt update
+sudo apt install openssh-client
+sudo apt install git
+sudo apt install xclip
+sudo apt install xsel
+
 # Generate ed25519 SSH key
 ssh-keygen -t ed25519 -C "nabeelaofficial04@gmail.com"
 
